@@ -1,0 +1,13 @@
+!noci
+data/System/JQIMaskContrib.txt 0644
+lib/Foswiki/Contrib/JQIMaskContrib/Config.spec 0644
+lib/Foswiki/Contrib/JQIMaskContrib/Core.pm 0644
+lib/Foswiki/Contrib/JQIMaskContrib/DEPENDENCIES 0644
+lib/Foswiki/Contrib/JQIMaskContrib.pm 0644
+pub/System/JQIMaskContrib/imask.js 0644
+pub/System/JQIMaskContrib/init.js 0644
+pub/System/JQIMaskContrib/Makefile 0644
+pub/System/JQIMaskContrib/package.json 0644
+pub/System/JQIMaskContrib/pkg.js 0644
+pub/System/JQIMaskContrib/pkg.js.gz 0644
+pub/System/JQIMaskContrib/pkg.uncompressed.js 0644

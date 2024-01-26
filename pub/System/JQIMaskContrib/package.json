@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "imask": "^7.1.3"
+  },
+  "name": "jq-imask-contrib",
+  "version": "1.0.0",
+  "description": "javascript input mask for foswiki",
+  "main": "pkg.js",
+  "scripts": {
+    "build": "make",
+    "clean": "make clean"
+  },
+  "author": "Michael Daum",
+  "license": "GPL-3.0-or-later"
+}
