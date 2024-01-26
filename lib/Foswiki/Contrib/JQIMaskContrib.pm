@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQIMaskContrib is Copyright (C) 2023 Michael Daum http://michaeldaumconsulting.com
+# JQIMaskContrib is Copyright (C) 2023-2024 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@ package Foswiki::Contrib::JQIMaskContrib;
 use strict;
 use warnings;
 
-our $VERSION = '0.10';
+our $VERSION = '0.20';
 our $RELEASE = '%$RELEASE%';
 our $SHORTDESCRIPTION = 'javascript input mask';
 our $LICENSECODE = '%$LICENSECODE%';

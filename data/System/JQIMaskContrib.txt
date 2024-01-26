@@ -5,8 +5,127 @@
 %TOC%
 
 ---++ Usage
+This extension bundles the fantastic [[https://imask.js.org/][imask.js]] package for Foswiki.
+Masks may be assigned to an input field in a declarative way: 
 
----++ Examples
+   1 assign the =.imask= css class to an html element
+   1 use HTML5 data attributes to further parametrize 
+
+---++ Syntax
+
+Start by including =%<nop>JQREQUIRE{"imask"}%= into your page.
+The input element is flagged with a css class =imask=. The type is specified in =data-type="..."=. Available types are:
+
+   * number
+   * currency
+   * date
+   * time
+   * enum
+   * range
+   * ipv4
+   * mac
+   * cidr
+   * regex
+
+---+++ Number
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | number |
+| data-thousands-separator | | _none_ |
+| data-scale | digits after the radix, use 0 for integer value | 999 |
+| data-pad-fractional-zeros | | false |
+| data-normalize-zeros | | true |
+| data-radix | fraction delimiter | . |
+| data-map-to-radix | list of chars to map to the proper radix  | [","] |
+
+Example:
+
+<verbatim>
+<input type="text" size="5" name="number" class="imask" data-type="number" value="123.45" />
+</verbatim>
+
+---+++ Currency
+
+same as number but with different defaults
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | currency |
+| data-thousands-separator | | _none_ |
+| data-scale | digits after the radix, use 0 for integer value | 2 |
+| data-pad-fractional-zeros | | true |
+| data-normalize-zeros | | true |
+| data-radix | fraction delimiter | , |
+| data-map-to-radix | list of chars to map to the proper radix  | ["."] |
+
+Example:
+
+<verbatim>
+<input type="text" size="5" name="currency" class="imask" data-type="currency" value="123.45" />
+</verbatim>
+
+---+++ Date
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | date |
+
+---+++ Time
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | time |
+
+Example:
+
+<verbatim>
+<input type="text" name="time" class="imask" data-type="time" value="23:59" />
+</verbatim>
+
+
+---+++ Emum
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | enum |
+| data-enum | comma separated list of allowed strings | _undef_ |
+
+Example:
+
+<verbatim>
+*Enum*: <input type="text" name="enum" class="imask" data-type="enum" data-enum="Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" value="Jan" />
+</verbatim>
+
+
+---+++ Range
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | range |
+| data-from | minimum numeric value | |
+| data-to | maximum numeric value | | 
+
+Example:
+
+<verbatim>
+<input type="text" name="range" class="imask" data-type="range" data-from="0" data-to="99" value="123" />
+</verbatim>
+
+---+++ IPv4
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | ipv4 |
+
+---+++ MAC
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | mac |
+
+---+++ CIDR
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | cidr |
+
+---+++ Regex
+
+| *Parameter* | *Descrition* | *Default* |
+| data-type | input type | regex |
+| data-mask | regex | _undef_ |
 
 ---++ Installation Instructions
 %$INSTALL_INSTRUCTIONS%
@@ -17,14 +136,14 @@
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
-| | |
+|  26 Jan 2024 | initial release |
 
 %META:FORM{name="PackageForm"}%
-%META:FIELD{name="Author" title="Author" value="MichaelDaum"}%
+%META:FIELD{name="Author" title="Author" value="Michael Daum"}%
 %META:FIELD{name="Version" title="Version" value="%$VERSION%"}%
 %META:FIELD{name="Release" title="Release" value="%$RELEASE%"}%
 %META:FIELD{name="Description" title="Description" value="%$SHORTDESCRIPTION%"}%
-%META:FIELD{name="Copyright" value="2023, MichaelDaum, All Rights Reserved"}%
+%META:FIELD{name="Copyright" value="2023-2024, Michael Daum, All Rights Reserved"}%
 %META:FIELD{name="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Repository" value="https://github.com/foswiki/%$ROOTMODULE%"}%
 %META:FIELD{name="Home" value="http://foswiki.org/Extensions/%$ROOTMODULE%"}%

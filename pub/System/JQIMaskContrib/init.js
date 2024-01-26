@@ -1,3 +1,12 @@
+/*
+ * IMask Init
+ *
+ * Copyright (C) 2024 Michael Daum http://michaeldaumconsulting.com
+ *
+ * Licensed under the GPL license http://www.gnu.org/licenses/gpl.html
+ *
+ */
+
 "use strict";
 
 (function($) {
@@ -17,6 +26,9 @@
         opts = $.extend({}, {
           mask: Number,
           mapToRadix: [","],
+          scale: 999,
+          normalizeZeros: true,
+          padFractionalZeros: false,
           radix: ".",
         }, opts);
         break;
@@ -26,6 +38,7 @@
           mask: Number,
           thousandsSeparator: "",
           scale: 2,
+          normalizeZeros: false,
           padFractionalZeros: true,
           mapToRadix: ["."],
           radix: ",",
@@ -128,7 +141,8 @@
             "max": 32,
             "scale": 0
           }
-        }
+        };
+        break;
     }
 
     mask = IMask(this, opts);
