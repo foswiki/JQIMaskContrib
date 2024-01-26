@@ -1,6 +1,13 @@
 JQIMaskContrib_installer.pl
 JQIMaskContrib.zip
 pub/System/JQIMaskContrib/node_modules
+JQIMaskContrib_installer
+JQIMaskContrib_installer.pl
+JQIMaskContrib.md5
+JQIMaskContrib.sha1
+JQIMaskContrib.tgz
+JQIMaskContrib.txt
+JQIMaskContrib.zip
 pub/System/JQIMaskContrib/imask.js
 pub/System/JQIMaskContrib/package-lock.json
 pub/System/JQIMaskContrib/pkg.js
